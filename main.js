@@ -1,57 +1,46 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
+const customName = document.getElementById('customname');
+const randomize = document.querySelector('.randomize');
+const story = document.querySelector('.story');
 
-    <title>Silly story generator</title>
+function randomValueFromArray(array){
+  const random = Math.floor(Math.random()*array.length);
+  return array[random];
+}
+const storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
 
-    <style>
+const insertX = [
+  'Willy the Goblin',
+  'Big Daddy',
+  'Father Christmas'
+];
 
-    body {
-      font-family: helvetica, sans-serif;
-      width: 350px;
-    }
+const insertY = [
+  'the soup kitchen',
+  'Disneyland',
+  'the White House'
+];
 
-    label {
-      font-weight: bold;  
-    }
+const insertZ = [
+  'spontaneously combusted',
+  'melted into a puddle on the sidewalk',
+  'turned into a slug and crawled away'
+];
 
-    div {
-      padding-bottom: 20px;
-    }
+randomize.addEventListener('click', result);
 
-    input[type="text"] {
-      padding: 5px;
-      width: 150px;
-    }
+function result() {
 
-    p {
-      background: #FFC125;
-      color: #5E2612;
-      padding: 10px;
-      visibility: hidden;
-    }
+  if(customName.value !== '') {
+    const name = customName.value;
 
-    </style>
-  </head>
+  }
 
-  <body>
-    <div>
-      <label for="customname">Enter custom name:</label>
-      <input id="customname" type="text" placeholder="">
-    </div>
-    <div>
-      <label for="us">US</label><input id="us" type="radio" name="ukus" value="us" checked>
-      <label for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk">
-    </div>
-    <div>
-      <button class="randomize">Generate random story</button>
-    </div>
-    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
-    <p class="story"></p>
-    
+  if(document.getElementById("uk").checked) {
+    const weight = Math.round(300);
+    const temperature =  Math.round(94);
 
-    
-  </body>
+  }
+
+  story.textContent = ;
+  story.style.visibility = 'visible';
+}
