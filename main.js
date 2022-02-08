@@ -29,6 +29,16 @@ const insertZ = [
 randomize.addEventListener('click', result);
 
 function result() {
+  let newStory = storyText;
+  const xItem = randomValueFromArray (insertX);
+  const yItem = randomValueFromArray (insertY);
+  const zItem = randomValueFromArray (insertZ);
+
+  newStory = newStory
+    .replace (':insertx:', xItem)
+    .replace (':insertx:', xItem)
+    .replace (':inserty:', yItem)
+    .replace (':insertz:', zItem);
 
   if(customName.value !== '') {
     const name = customName.value;
